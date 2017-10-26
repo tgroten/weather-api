@@ -87,7 +87,7 @@ func WeatherByLatLongAndDate(w http.ResponseWriter, req *http.Request) {
 
 		temp := tm.AddDate(0, 0, -i)
 
-		resp, err := http.Get("https://api.darksky.net/forecast/dc2bf048b99764a267b7f54cdce81000/" + lat + "," + long + "," + strconv.Itoa(int(temp.Unix())))
+		resp, err := http.Get("https://api.darksky.net/forecast/{{signup at https://darksky.net/dev for a key}}/" + lat + "," + long + "," + strconv.Itoa(int(temp.Unix())))
 		if err != nil {
 
 			w.WriteHeader(http.StatusBadRequest)
