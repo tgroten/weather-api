@@ -4,8 +4,8 @@ RUN GOPATH=/go && \
     apk add --no-cache git openssl bzr openssh && \
     go get -u github.com/golang/dep/cmd/dep
 
-COPY . /go/src/github.com/arcusnext/weather-api
-WORKDIR /go/src/github.com/arcusnext/weather-api
+COPY . /go/src/bitbucket.org/arcusnext/weather-api
+WORKDIR /go/src/bitbucket.org/arcusnext/weather-api
 
 RUN chmod +x build.sh
 RUN ./build.sh
